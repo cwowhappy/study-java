@@ -11,11 +11,41 @@
         <module>study-java-thread</module>
     </modules>
     <properties>
+        <project.source.encoding>UTF-8</project.source.encoding>
+        <project.source.jdk.version>1.8</project.source.jdk.version>
+        <project.target.jdk.version>1.8</project.target.jdk.version>
 
         <dependency.version.junit>4.12</dependency.version.junit>
         <dependency.version.guava>20.0</dependency.version.guava>
+        <dependency.version.jackson>2.8.5</dependency.version.jackson>
         <dependency.version.slf4j-log4j12>1.7.21</dependency.version.slf4j-log4j12>
+
+        <plugin.version.compiler>3.5.1</plugin.version.compiler>
+        <plugin.version.war>3.0.0</plugin.version.war>
+        <plugin.version.jetty>9.3.14.v20161028</plugin.version.jetty>
     </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${project.target.jdk.version}</source>
+                    <target>${project.target.jdk.version}</target>
+                    <encoding>${project.source.encoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${plugin.version.compiler}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
     <dependencyManagement>
         <dependencies>
@@ -30,6 +60,11 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${dependency.version.guava}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${dependency.version.jackson}</version>
             </dependency>
             <!-- Log日志依赖库 -->
             <dependency>
