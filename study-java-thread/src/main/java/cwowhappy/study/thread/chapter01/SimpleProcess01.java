@@ -5,15 +5,14 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 /**
  * @author cwowhappy
  * 2016-12-28 Wednesday
  */
-public class SimpleProcess {
-    private static final Logger LOGGER = LoggerFactory.getLogger(SimpleProcess.class);
+public class SimpleProcess01 {
+    private static final Logger LOGGER = LoggerFactory.getLogger(SimpleProcess01.class);
 
     public void execute() throws InterruptedException {
         //BlockingQueue<SimpleMessage> messageQueue = new ArrayBlockingQueue<>(100);
@@ -38,7 +37,7 @@ public class SimpleProcess {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        SimpleProcess simpleProcess = new SimpleProcess();
+        SimpleProcess01 simpleProcess = new SimpleProcess01();
         simpleProcess.execute();
     }
 }

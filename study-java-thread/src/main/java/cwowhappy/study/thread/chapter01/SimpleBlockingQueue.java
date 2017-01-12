@@ -21,8 +21,8 @@ public class SimpleBlockingQueue<E> implements BlockingQueue<E> {
     private int takeIndex;
 
     private ReentrantLock lock;
-    private Condition notFull;
-    private Condition notEmpty;
+    private final Condition notFull;
+    private final Condition notEmpty;
 
     public SimpleBlockingQueue() {
         this(DEFAULT_CAPACITY);
@@ -36,7 +36,7 @@ public class SimpleBlockingQueue<E> implements BlockingQueue<E> {
         this.count = this.putIndex = this.takeIndex = 0;
         this.items = new Object[this.capacity];
 
-        this.lock = new ReentrantLock(true);
+        lock = new ReentrantLock(true);
         this.notEmpty = this.lock.newCondition();
         this.notFull = this.lock.newCondition();
     }

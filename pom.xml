@@ -9,6 +9,7 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>study-java-thread</module>
+        <module>study-java-classloader</module>
     </modules>
     <properties>
         <project.source.encoding>UTF-8</project.source.encoding>
@@ -54,6 +55,7 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${dependency.version.junit}</version>
+                <scope>test</scope>
             </dependency>
             <!-- 基础组件依赖库 -->
             <dependency>
