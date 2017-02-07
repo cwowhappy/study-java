@@ -10,7 +10,8 @@
     <modules>
         <module>study-java-thread</module>
         <module>study-java-classloader</module>
-    </modules>
+    <module>study-java-dp</module>
+  </modules>
     <properties>
         <project.source.encoding>UTF-8</project.source.encoding>
         <project.source.jdk.version>1.8</project.source.jdk.version>
@@ -19,7 +20,7 @@
         <dependency.version.junit>4.12</dependency.version.junit>
         <dependency.version.guava>20.0</dependency.version.guava>
         <dependency.version.jackson>2.8.5</dependency.version.jackson>
-        <dependency.version.slf4j-log4j12>1.7.21</dependency.version.slf4j-log4j12>
+        <dependency.version.slf4j>1.7.21</dependency.version.slf4j>
 
         <plugin.version.compiler>3.5.1</plugin.version.compiler>
         <plugin.version.war>3.0.0</plugin.version.war>
@@ -72,7 +73,12 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
-                <version>${dependency.version.slf4j-log4j12}</version>
+                <version>${dependency.version.slf4j}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${dependency.version.slf4j}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
