@@ -10,7 +10,9 @@
     <modules>
         <module>study-java-thread</module>
         <module>study-java-classloader</module>
-    <module>study-java-dp</module>
+        <module>study-java-dp</module>
+        <module>study-java-annotation</module>
+    <module>study-java-reflection</module>
   </modules>
     <properties>
         <project.source.encoding>UTF-8</project.source.encoding>
@@ -48,6 +50,13 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
