@@ -12,8 +12,9 @@
         <module>study-java-classloader</module>
         <module>study-java-dp</module>
         <module>study-java-annotation</module>
-    <module>study-java-reflection</module>
-  </modules>
+        <module>study-java-reflection</module>
+        <module>study-java-polymorphism</module>
+    </modules>
     <properties>
         <project.source.encoding>UTF-8</project.source.encoding>
         <project.source.jdk.version>1.8</project.source.jdk.version>
