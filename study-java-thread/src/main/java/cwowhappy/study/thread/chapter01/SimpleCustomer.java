@@ -1,36 +1,32 @@
 package cwowhappy.study.thread.chapter01;
 
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.concurrent.BlockingQueue;
-
 /**
- * @author cwowhappy
- * 2016-12-27 Wednesday
+ * Created by cwowhappy on 2017/9/28.
  */
 public class SimpleCustomer implements Runnable {
-    private static final Logger LOGGER = LoggerFactory.getLogger(SimpleCustomer.class);
-    private BlockingQueue<SimpleMessage> messageQueue;
+    private static final Logger LOGGER = LoggerFactory.getLogger(SimpleProducer.class);
+    private String name;
+    private Long interval;
+    private SimpleBlockingQueue<String> simpleBlockingQueue;
 
-    public SimpleCustomer(BlockingQueue<SimpleMessage> messageQueue) {
-        this.messageQueue = messageQueue;
+    public SimpleCustomer(String name, Long interval, SimpleBlockingQueue<String> simpleBlockingQueue) {
+        this.name = name;
+        this.interval = interval;
+        this.simpleBlockingQueue = simpleBlockingQueue;
     }
 
     @Override
     public void run() {
-        ObjectMapper objectMapper = new ObjectMapper();
-        while(true) {
+        while (true) {
             try {
-                SimpleMessage simpleMessage = messageQueue.take();
-                LOGGER.info("Message[consume-{}]:{}", Thread.currentThread().getId(), objectMapper.writeValueAsString(simpleMessage));
-                Thread.sleep(1000);
-            } catch (InterruptedException | JsonProcessingException e) {
-                LOGGER.error("Exception:{}", e.getMessage());
-                LOGGER.debug("{}", e);
+                String value = simpleBlockingQueue.take();
+                LOGGER.info("[{}]->Customer[{}] custom element[{}]", Thread.currentThread().getName(), name, value);
+                Thread.sleep(interval);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
     }
