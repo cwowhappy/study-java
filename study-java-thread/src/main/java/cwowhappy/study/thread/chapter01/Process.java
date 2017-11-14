@@ -1,6 +1,7 @@
 package cwowhappy.study.thread.chapter01;
 
 import java.util.List;
+import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -22,6 +23,11 @@ public class Process {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        testSimpleBlockingQueue();
+        //testSimpleBlockingQueue();
+        StringTokenizer stringTokenizer = new StringTokenizer("/a/ /c/", "/");
+        while (stringTokenizer.hasMoreTokens()) {
+            System.out.println("/" + stringTokenizer.nextToken());
+        }
+
     }
 }

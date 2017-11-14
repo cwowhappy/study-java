@@ -15,6 +15,8 @@
         <module>study-java-reflection</module>
         <module>study-java-polymorphism</module>
         <module>study-java-serviceloader</module>
+        <module>study-java-coroutine</module>
+        <module>study-java-kotlin</module>
     </modules>
     <properties>
         <project.source.encoding>UTF-8</project.source.encoding>
