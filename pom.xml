@@ -17,6 +17,7 @@
         <module>study-java-serviceloader</module>
         <module>study-java-coroutine</module>
         <module>study-java-kotlin</module>
+        <module>study-java-concurrency</module>
     </modules>
     <properties>
         <project.source.encoding>UTF-8</project.source.encoding>
@@ -26,7 +27,8 @@
         <dependency.version.junit>4.12</dependency.version.junit>
         <dependency.version.guava>20.0</dependency.version.guava>
         <dependency.version.jackson>2.8.5</dependency.version.jackson>
-        <dependency.version.slf4j>1.7.21</dependency.version.slf4j>
+        <dependency.version.slf4j>1.7.25</dependency.version.slf4j>
+        <dependency.version.logback>1.2.3</dependency.version.logback>
 
         <plugin.version.compiler>3.5.1</plugin.version.compiler>
         <plugin.version.war>3.0.0</plugin.version.war>
@@ -58,7 +60,11 @@
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
         </dependency>
     </dependencies>
 
@@ -85,13 +91,18 @@
             <!-- Log日志依赖库 -->
             <dependency>
                 <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-log4j12</artifactId>
+                <artifactId>slf4j-api</artifactId>
                 <version>${dependency.version.slf4j}</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>jcl-over-slf4j</artifactId>
                 <version>${dependency.version.slf4j}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${dependency.version.logback}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
