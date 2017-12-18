@@ -17,6 +17,7 @@
         <module>study-java-serviceloader</module>
         <module>study-java-coroutine</module>
         <module>study-java-kotlin</module>
+        <module>study-java-generics</module>
     </modules>
     <properties>
         <project.source.encoding>UTF-8</project.source.encoding>
