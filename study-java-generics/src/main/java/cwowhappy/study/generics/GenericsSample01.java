@@ -24,14 +24,23 @@ public class GenericsSample01 {
         animals.forEach(Greeting::greet);
     }
 
+    public static void increment(Integer number) {
+        Integer tmp = number;
+        number += 1;
+        System.out.println(tmp == number);
+    }
+
     public static void main(String[] args) {
-        List<Animal> animals = new ArrayList<>();
-        animals.add(new Animal("animal-01"));
-
-        List<Dog> dogs = new ArrayList<>();
-        dogs.add(new Dog("dog-01"));
-
-        greets(animals);
-        greetsInWildcard(dogs);
+//        List<Animal> animals = new ArrayList<>();
+//        animals.add(new Animal("animal-01"));
+//
+//        List<Dog> dogs = new ArrayList<>();
+//        dogs.add(new Dog("dog-01"));
+//
+//        greets(animals);
+//        greetsInWildcard(dogs);
+        Integer number = 3;
+        increment(number);
+        System.out.println(number);
     }
 }
