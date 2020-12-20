@@ -9,13 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>study-java-classloader</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>study-java-zookeeper</artifactId>
+
+    <properties>
+        <dependency.version.curator-framework>5.1.0</dependency.version.curator-framework>
+    </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>${dependency.version.curator-framework}</version>
         </dependency>
     </dependencies>
+
 </project>

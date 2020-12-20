@@ -8,7 +8,6 @@
     <name>study-java</name>
     <url>http://maven.apache.org</url>
     <modules>
-        <module>study-java-thread</module>
         <module>study-java-classloader</module>
         <module>study-java-dp</module>
         <module>study-java-annotation</module>
@@ -19,6 +18,7 @@
         <module>study-java-kotlin</module>
         <module>study-java-concurrency</module>
         <module>study-java-generics</module>
+        <module>study-java-zookeeper</module>
     </modules>
     <properties>
         <project.source.encoding>UTF-8</project.source.encoding>
@@ -26,14 +26,12 @@
         <project.target.jdk.version>1.8</project.target.jdk.version>
 
         <dependency.version.junit>4.12</dependency.version.junit>
-        <dependency.version.guava>20.0</dependency.version.guava>
-        <dependency.version.jackson>2.8.5</dependency.version.jackson>
-        <dependency.version.slf4j>1.7.25</dependency.version.slf4j>
+        <dependency.version.guava>30.1-jre</dependency.version.guava>
+        <dependency.version.jackson>2.12.0</dependency.version.jackson>
+        <dependency.version.slf4j>1.7.30</dependency.version.slf4j>
         <dependency.version.logback>1.2.3</dependency.version.logback>
 
-        <plugin.version.compiler>3.5.1</plugin.version.compiler>
-        <plugin.version.war>3.0.0</plugin.version.war>
-        <plugin.version.jetty>9.3.14.v20161028</plugin.version.jetty>
+        <plugin.version.compiler>3.8.1</plugin.version.compiler>
     </properties>
 
     <build>

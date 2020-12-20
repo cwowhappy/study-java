@@ -37,11 +37,4 @@ public class StudyCompletableFuture {
         }).join();
     }
 
-    private void testSync() {
-
-    }
-
-    private void testAsync() {
-
-    }
 }
